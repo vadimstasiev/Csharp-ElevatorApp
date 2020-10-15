@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.picLeftDoor = new System.Windows.Forms.PictureBox();
+            this.picElevator = new System.Windows.Forms.PictureBox();
+            this.picRightDoor = new System.Windows.Forms.PictureBox();
             this.lvl1 = new System.Windows.Forms.GroupBox();
             this.lvl0 = new System.Windows.Forms.GroupBox();
             this.btnCall1 = new System.Windows.Forms.Button();
@@ -44,9 +44,9 @@
             this.btnLevel3 = new System.Windows.Forms.Button();
             this.btnLevel1 = new System.Windows.Forms.Button();
             this.btnLevel0 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftDoor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picElevator)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightDoor)).BeginInit();
             this.lvl1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,38 +60,38 @@
             this.textBox3.Size = new System.Drawing.Size(303, 310);
             this.textBox3.TabIndex = 2;
             // 
-            // pictureBox2
+            // picLeftDoor
             // 
-            this.pictureBox2.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 165);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.picLeftDoor.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
+            this.picLeftDoor.Location = new System.Drawing.Point(15, 27);
+            this.picLeftDoor.Name = "picLeftDoor";
+            this.picLeftDoor.Size = new System.Drawing.Size(61, 165);
+            this.picLeftDoor.TabIndex = 4;
+            this.picLeftDoor.TabStop = false;
             // 
-            // pictureBox1
+            // picElevator
             // 
-            this.pictureBox1.BackgroundImage = global::ElevatorApp.Properties.Resources.elevator;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 165);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.picElevator.BackgroundImage = global::ElevatorApp.Properties.Resources.elevator;
+            this.picElevator.Location = new System.Drawing.Point(15, 27);
+            this.picElevator.Name = "picElevator";
+            this.picElevator.Size = new System.Drawing.Size(120, 165);
+            this.picElevator.TabIndex = 3;
+            this.picElevator.TabStop = false;
             // 
-            // pictureBox3
+            // picRightDoor
             // 
-            this.pictureBox3.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
-            this.pictureBox3.Location = new System.Drawing.Point(74, 27);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(61, 165);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.picRightDoor.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
+            this.picRightDoor.Location = new System.Drawing.Point(74, 27);
+            this.picRightDoor.Name = "picRightDoor";
+            this.picRightDoor.Size = new System.Drawing.Size(61, 165);
+            this.picRightDoor.TabIndex = 5;
+            this.picRightDoor.TabStop = false;
             // 
             // lvl1
             // 
-            this.lvl1.Controls.Add(this.pictureBox2);
-            this.lvl1.Controls.Add(this.pictureBox3);
-            this.lvl1.Controls.Add(this.pictureBox1);
+            this.lvl1.Controls.Add(this.picLeftDoor);
+            this.lvl1.Controls.Add(this.picRightDoor);
+            this.lvl1.Controls.Add(this.picElevator);
             this.lvl1.Location = new System.Drawing.Point(55, 219);
             this.lvl1.Name = "lvl1";
             this.lvl1.Size = new System.Drawing.Size(151, 201);
@@ -220,9 +220,9 @@
             this.Controls.Add(this.textBox3);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftDoor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picElevator)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRightDoor)).EndInit();
             this.lvl1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -232,9 +232,9 @@
 
         #endregion
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox picElevator;
+        private System.Windows.Forms.PictureBox picLeftDoor;
+        private System.Windows.Forms.PictureBox picRightDoor;
         private System.Windows.Forms.GroupBox lvl1;
         private System.Windows.Forms.GroupBox lvl0;
         private System.Windows.Forms.Button btnCall1;
