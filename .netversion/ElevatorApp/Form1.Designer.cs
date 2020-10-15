@@ -36,7 +36,7 @@
             this.lvl0 = new System.Windows.Forms.GroupBox();
             this.btnCall1 = new System.Windows.Forms.Button();
             this.btnCall0 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCall2 = new System.Windows.Forms.Button();
             this.lvl2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCloseDoors = new System.Windows.Forms.Button();
@@ -126,14 +126,14 @@
             this.btnCall0.Text = "Call";
             this.btnCall0.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCall2
             // 
-            this.button1.Location = new System.Drawing.Point(14, 108);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Call";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCall2.Location = new System.Drawing.Point(14, 108);
+            this.btnCall2.Name = "btnCall2";
+            this.btnCall2.Size = new System.Drawing.Size(35, 23);
+            this.btnCall2.TabIndex = 11;
+            this.btnCall2.Text = "Call";
+            this.btnCall2.UseVisualStyleBackColor = true;
             // 
             // lvl2
             // 
@@ -210,7 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 659);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCall2);
             this.Controls.Add(this.lvl2);
             this.Controls.Add(this.btnCall0);
             this.Controls.Add(this.btnCall1);
@@ -238,7 +238,7 @@
         private System.Windows.Forms.GroupBox lvl0;
         private System.Windows.Forms.Button btnCall1;
         private System.Windows.Forms.Button btnCall0;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCall2;
         private System.Windows.Forms.GroupBox lvl2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLevel3;
