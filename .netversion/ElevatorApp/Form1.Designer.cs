@@ -107,7 +107,6 @@
             this.lvl0.TabIndex = 7;
             this.lvl0.TabStop = false;
             this.lvl0.Text = "level 0";
-            this.lvl0.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btnCall1
             // 
@@ -117,7 +116,6 @@
             this.btnCall1.TabIndex = 8;
             this.btnCall1.Text = "Call";
             this.btnCall1.UseVisualStyleBackColor = true;
-            this.btnCall1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCall0
             // 
@@ -177,6 +175,7 @@
             this.btnOpenDoors.TabIndex = 3;
             this.btnOpenDoors.Text = "Open Doors";
             this.btnOpenDoors.UseVisualStyleBackColor = true;
+            this.btnOpenDoors.Click += new System.EventHandler(this.btnOpenDoors_Click);
             // 
             // btnLevel3
             // 
