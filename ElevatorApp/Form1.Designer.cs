@@ -89,6 +89,15 @@
             this.picRightDoor.TabIndex = 5;
             this.picRightDoor.TabStop = false;
             // 
+            // lvl2
+            // 
+            this.lvl2.Location = new System.Drawing.Point(55, 12);
+            this.lvl2.Name = "lvl2";
+            this.lvl2.Size = new System.Drawing.Size(151, 201);
+            this.lvl2.TabIndex = 10;
+            this.lvl2.TabStop = false;
+            this.lvl2.Text = "level 2";
+            // 
             // lvl1
             // 
             this.lvl1.Location = new System.Drawing.Point(55, 219);
@@ -107,6 +116,16 @@
             this.lvl0.TabStop = false;
             this.lvl0.Text = "level 0";
             // 
+            // btnCall2
+            // 
+            this.btnCall2.Location = new System.Drawing.Point(14, 108);
+            this.btnCall2.Name = "btnCall2";
+            this.btnCall2.Size = new System.Drawing.Size(35, 23);
+            this.btnCall2.TabIndex = 11;
+            this.btnCall2.Text = "Call";
+            this.btnCall2.UseVisualStyleBackColor = true;
+            this.btnCall2.Click += new System.EventHandler(this.btnLevel2_Click);
+            // 
             // btnCall1
             // 
             this.btnCall1.Location = new System.Drawing.Point(14, 315);
@@ -115,6 +134,7 @@
             this.btnCall1.TabIndex = 8;
             this.btnCall1.Text = "Call";
             this.btnCall1.UseVisualStyleBackColor = true;
+            this.btnCall1.Click += new System.EventHandler(this.btnLevel1_Click);
             // 
             // btnCall0
             // 
@@ -124,24 +144,7 @@
             this.btnCall0.TabIndex = 9;
             this.btnCall0.Text = "Call";
             this.btnCall0.UseVisualStyleBackColor = true;
-            // 
-            // btnCall2
-            // 
-            this.btnCall2.Location = new System.Drawing.Point(14, 108);
-            this.btnCall2.Name = "btnCall2";
-            this.btnCall2.Size = new System.Drawing.Size(35, 23);
-            this.btnCall2.TabIndex = 11;
-            this.btnCall2.Text = "Call";
-            this.btnCall2.UseVisualStyleBackColor = true;
-            // 
-            // lvl2
-            // 
-            this.lvl2.Location = new System.Drawing.Point(55, 12);
-            this.lvl2.Name = "lvl2";
-            this.lvl2.Size = new System.Drawing.Size(151, 201);
-            this.lvl2.TabIndex = 10;
-            this.lvl2.TabStop = false;
-            this.lvl2.Text = "level 2";
+            this.btnCall0.Click += new System.EventHandler(this.btnLevel0_Click);
             // 
             // groupBox1
             // 

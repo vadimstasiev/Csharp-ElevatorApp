@@ -81,7 +81,7 @@ namespace ElevatorApp
         private void elevatorTick_Tick(object sender, EventArgs e)
         {
             int elevator_position = this.picElevator.Location.Y;
-            if (elevator_position != target_position)
+            if (elevator_position != target_position && !isDoorsOpen)
             {
                 isMoving = true;
                 if (elevator_position<target_position)
@@ -101,25 +101,37 @@ namespace ElevatorApp
             {
                 isMoving = false;
                 this.elevatorTick.Enabled = false;
+                this.openDoors();
             }
+         
         }
 
         private void btnLevel2_Click(object sender, EventArgs e)
         {
-            this.target_position = LEVEL_2;
-            this.elevatorTick.Enabled = true;
+            if (!isMoving)
+            {
+                this.target_position = LEVEL_2;
+                this.elevatorTick.Enabled = true;
+            }
         }
 
         private void btnLevel1_Click(object sender, EventArgs e)
         {
-            this.target_position = LEVEL_1;
-            this.elevatorTick.Enabled = true;
+            if (!isMoving)
+            {
+                this.target_position = LEVEL_1;
+                this.elevatorTick.Enabled = true;
+            }
         }
 
         private void btnLevel0_Click(object sender, EventArgs e)
         {
-            this.target_position = LEVEL_0;
-            this.elevatorTick.Enabled = true;
+            if (!isMoving)
+            {
+                this.target_position = LEVEL_0;
+                this.elevatorTick.Enabled = true;
+            }
         }
+
     }
 }
