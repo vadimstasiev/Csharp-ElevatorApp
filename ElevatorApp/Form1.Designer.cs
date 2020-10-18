@@ -59,7 +59,7 @@
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox3.Size = new System.Drawing.Size(303, 310);
+            this.textBox3.Size = new System.Drawing.Size(303, 615);
             this.textBox3.TabIndex = 2;
             // 
             // picLeftDoor
