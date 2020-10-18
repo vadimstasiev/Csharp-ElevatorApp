@@ -65,7 +65,7 @@
             // picLeftDoor
             // 
             this.picLeftDoor.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
-            this.picLeftDoor.Location = new System.Drawing.Point(65, 255);
+            this.picLeftDoor.Location = new System.Drawing.Point(70, 245);
             this.picLeftDoor.Name = "picLeftDoor";
             this.picLeftDoor.Size = new System.Drawing.Size(61, 165);
             this.picLeftDoor.TabIndex = 4;
@@ -74,7 +74,7 @@
             // picElevator
             // 
             this.picElevator.BackgroundImage = global::ElevatorApp.Properties.Resources.elevator;
-            this.picElevator.Location = new System.Drawing.Point(65, 255);
+            this.picElevator.Location = new System.Drawing.Point(70, 245);
             this.picElevator.Name = "picElevator";
             this.picElevator.Size = new System.Drawing.Size(120, 165);
             this.picElevator.TabIndex = 3;
@@ -83,7 +83,7 @@
             // picRightDoor
             // 
             this.picRightDoor.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
-            this.picRightDoor.Location = new System.Drawing.Point(125, 255);
+            this.picRightDoor.Location = new System.Drawing.Point(130, 245);
             this.picRightDoor.Name = "picRightDoor";
             this.picRightDoor.Size = new System.Drawing.Size(61, 165);
             this.picRightDoor.TabIndex = 5;
