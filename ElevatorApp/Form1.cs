@@ -17,5 +17,10 @@ namespace ElevatorApp
             InitializeComponent();
         }
 
+
+        private void btnOpenDoors_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
