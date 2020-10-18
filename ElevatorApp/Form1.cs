@@ -74,9 +74,9 @@ namespace ElevatorApp
         }
 
         private int target_position;
-        private int LEVEL_2 = -200;
-        private int LEVEL_1 = 40;
-        private int LEVEL_0 = 60;
+        private int LEVEL_2 = 35;
+        private int LEVEL_1 = 245;
+        private int LEVEL_0 = 455;
         private bool isMoving = false;
         private void elevatorTick_Tick(object sender, EventArgs e)
         {
@@ -104,9 +104,21 @@ namespace ElevatorApp
             }
         }
 
-        private void btnLevel3_Click(object sender, EventArgs e)
+        private void btnLevel2_Click(object sender, EventArgs e)
         {
             this.target_position = LEVEL_2;
+            this.elevatorTick.Enabled = true;
+        }
+
+        private void btnLevel1_Click(object sender, EventArgs e)
+        {
+            this.target_position = LEVEL_1;
+            this.elevatorTick.Enabled = true;
+        }
+
+        private void btnLevel0_Click(object sender, EventArgs e)
+        {
+            this.target_position = LEVEL_0;
             this.elevatorTick.Enabled = true;
         }
     }

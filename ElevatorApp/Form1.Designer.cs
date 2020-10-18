@@ -42,7 +42,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCloseDoors = new System.Windows.Forms.Button();
             this.btnOpenDoors = new System.Windows.Forms.Button();
-            this.btnLevel3 = new System.Windows.Forms.Button();
+            this.btnLevel2 = new System.Windows.Forms.Button();
             this.btnLevel1 = new System.Windows.Forms.Button();
             this.btnLevel0 = new System.Windows.Forms.Button();
             this.doorsTick = new System.Windows.Forms.Timer(this.components);
@@ -147,7 +147,7 @@
             // 
             this.groupBox1.Controls.Add(this.btnCloseDoors);
             this.groupBox1.Controls.Add(this.btnOpenDoors);
-            this.groupBox1.Controls.Add(this.btnLevel3);
+            this.groupBox1.Controls.Add(this.btnLevel2);
             this.groupBox1.Controls.Add(this.btnLevel1);
             this.groupBox1.Controls.Add(this.btnLevel0);
             this.groupBox1.Location = new System.Drawing.Point(290, 37);
@@ -177,15 +177,15 @@
             this.btnOpenDoors.UseVisualStyleBackColor = true;
             this.btnOpenDoors.Click += new System.EventHandler(this.btnOpenDoors_Click);
             // 
-            // btnLevel3
+            // btnLevel2
             // 
-            this.btnLevel3.Location = new System.Drawing.Point(170, 66);
-            this.btnLevel3.Name = "btnLevel3";
-            this.btnLevel3.Size = new System.Drawing.Size(64, 33);
-            this.btnLevel3.TabIndex = 2;
-            this.btnLevel3.Text = "Level 2";
-            this.btnLevel3.UseVisualStyleBackColor = true;
-            this.btnLevel3.Click += new System.EventHandler(this.btnLevel3_Click);
+            this.btnLevel2.Location = new System.Drawing.Point(170, 66);
+            this.btnLevel2.Name = "btnLevel2";
+            this.btnLevel2.Size = new System.Drawing.Size(64, 33);
+            this.btnLevel2.TabIndex = 2;
+            this.btnLevel2.Text = "Level 2";
+            this.btnLevel2.UseVisualStyleBackColor = true;
+            this.btnLevel2.Click += new System.EventHandler(this.btnLevel2_Click);
             // 
             // btnLevel1
             // 
@@ -195,6 +195,7 @@
             this.btnLevel1.TabIndex = 1;
             this.btnLevel1.Text = "Level 1";
             this.btnLevel1.UseVisualStyleBackColor = true;
+            this.btnLevel1.Click += new System.EventHandler(this.btnLevel1_Click);
             // 
             // btnLevel0
             // 
@@ -204,6 +205,7 @@
             this.btnLevel0.TabIndex = 0;
             this.btnLevel0.Text = "Level 0";
             this.btnLevel0.UseVisualStyleBackColor = true;
+            this.btnLevel0.Click += new System.EventHandler(this.btnLevel0_Click);
             // 
             // doorsTick
             // 
@@ -254,7 +256,7 @@
         private System.Windows.Forms.Button btnCall2;
         private System.Windows.Forms.GroupBox lvl2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnLevel3;
+        private System.Windows.Forms.Button btnLevel2;
         private System.Windows.Forms.Button btnLevel1;
         private System.Windows.Forms.Button btnLevel0;
         private System.Windows.Forms.Button btnCloseDoors;
