@@ -15,6 +15,7 @@ namespace ElevatorApp
         public Form1()
         {
             InitializeComponent();
+            this.updateDisplayElevatorPosition();
         }
 
         // if the animation of the doors is opening or closing
@@ -30,6 +31,7 @@ namespace ElevatorApp
         {
             if (!this.doorsTick.Enabled && !this.isDoorsOpen && !this.isElevatorMoving)
             {
+                updateDisplayElevatorPosition();
                 this.isDoorsOpen = true;
                 this.isDoorsMoving = true;
                 this.doorsTick.Enabled = true;
@@ -82,7 +84,7 @@ namespace ElevatorApp
             closeDoors();
         }
 
-        private int target_position;
+        private int target_position = 1;
         private int LEVEL_2 = 35;
         private int LEVEL_1 = 245;
         private int LEVEL_0 = 455;
@@ -118,20 +120,27 @@ namespace ElevatorApp
 
         public String getCurrentFloor()
         {
-            int currentPosition = this.picElevator.Location.Y;
-            if (currentPosition == LEVEL_2)
+
+            if (this.target_position == LEVEL_2)
             {
                 return "2";
-            }
-            else if (currentPosition == LEVEL_1)
+            }else if (this.target_position == LEVEL_1)
             {
-                return "2";
-            }
-            else if (currentPosition == LEVEL_0)
+                return "1";
+            }else if (this.target_position == LEVEL_0)
             {
-                return "2";
+                return "0";
             }
-            return "/";
+            return "1";
+        }
+
+        public void updateDisplayElevatorPosition()
+        {
+            String currentFloor = getCurrentFloor();
+            this.lblCurrentFloor2.Text = currentFloor;
+            this.lblCurrentFloor1.Text = currentFloor;
+            this.lblCurrentFloor0.Text = currentFloor;
+            this.lblCurrentFloor.Text = currentFloor;
         }
         private void moveElevatorTo(int level)
         {
