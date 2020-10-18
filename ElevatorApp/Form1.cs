@@ -37,7 +37,7 @@ namespace ElevatorApp
         }
         private void closeDoors()
         {
-            if (!this.doorsTick.Enabled && isDoorsOpen )
+            if (!this.doorsTick.Enabled && isDoorsOpen)
             {
                 this.isDoorsOpen = false;
                 this.isDoorsMoving = true;
@@ -56,13 +56,15 @@ namespace ElevatorApp
                 {
                     this.picRightDoor.Location = new System.Drawing.Point(this.picRightDoor.Location.X + 1, this.picRightDoor.Location.Y);
                     this.picLeftDoor.Location = new System.Drawing.Point(this.picLeftDoor.Location.X - 1, this.picLeftDoor.Location.Y);
-                } else
+                }
+                else
                 {
                     this.picRightDoor.Location = new System.Drawing.Point(this.picRightDoor.Location.X - 1, this.picRightDoor.Location.Y);
                     this.picLeftDoor.Location = new System.Drawing.Point(this.picLeftDoor.Location.X + 1, this.picLeftDoor.Location.Y);
                 }
 
-            } else
+            }
+            else
             {
                 this.isDoorsMoving = false;
                 this.tempDoorPosition = 0;
@@ -112,6 +114,24 @@ namespace ElevatorApp
                     this.openDoors();
                 }
             }
+        }
+
+        public String getCurrentFloor()
+        {
+            int currentPosition = this.picElevator.Location.Y;
+            if (currentPosition == LEVEL_2)
+            {
+                return "2";
+            }
+            else if (currentPosition == LEVEL_1)
+            {
+                return "2";
+            }
+            else if (currentPosition == LEVEL_0)
+            {
+                return "2";
+            }
+            return "/";
         }
         private void moveElevatorTo(int level)
         {
