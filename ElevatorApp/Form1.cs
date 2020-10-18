@@ -17,14 +17,19 @@ namespace ElevatorApp
             InitializeComponent();
         }
 
+        // if the animation of the doors is opening or closing
+        // private bool isDoorsOpen = false;
 
-        private bool isDoorsOpening = false;
+        // if doors animation is running
+        private bool isDoorsMoving = false;
+        // Current state of the elevator doors
         private bool isDoorsOpen = false;
         private void openDoors()
         {
-            if (!this.doorsTick.Enabled && !isDoorsOpen)
+            if (!this.doorsTick.Enabled && !this.isDoorsOpen)
             {
-                this.isDoorsOpening = true;
+                this.isDoorsOpen = true;
+                this.isDoorsMoving = true;
                 this.doorsTick.Enabled = true;
             }
         }
@@ -32,34 +37,34 @@ namespace ElevatorApp
         {
             if (!this.doorsTick.Enabled && isDoorsOpen )
             {
-                this.isDoorsOpening = false;
+                this.isDoorsOpen = false;
+                this.isDoorsMoving = true;
                 this.doorsTick.Enabled = true;
             }
         }
 
         private int tempDoorPosition = 0;
-        private void doorsTick_Tick(object sender, EventArgs e)
+        private void doors_tick_animation(object sender, EventArgs e)
         {
-            int doorTravelDistance = 50;
+            int doorTravelDistance = 58;
             if (tempDoorPosition != doorTravelDistance)
             {
-                tempDoorPosition++;
-                if (isDoorsOpening)
+                this.tempDoorPosition++;
+                if (this.isDoorsOpen)
                 {
                     this.picRightDoor.Location = new System.Drawing.Point(this.picRightDoor.Location.X + 1, this.picRightDoor.Location.Y);
                     this.picLeftDoor.Location = new System.Drawing.Point(this.picLeftDoor.Location.X - 1, this.picLeftDoor.Location.Y);
-                    isDoorsOpen = true;
                 } else
                 {
                     this.picRightDoor.Location = new System.Drawing.Point(this.picRightDoor.Location.X - 1, this.picRightDoor.Location.Y);
                     this.picLeftDoor.Location = new System.Drawing.Point(this.picLeftDoor.Location.X + 1, this.picLeftDoor.Location.Y);
-                    isDoorsOpen = false;
                 }
 
             } else
             {
+                this.isDoorsMoving = false;
+                this.tempDoorPosition = 0;
                 this.doorsTick.Enabled = false;
-                tempDoorPosition = 0;
             }
         }
 
@@ -78,59 +83,58 @@ namespace ElevatorApp
         private int LEVEL_1 = 245;
         private int LEVEL_0 = 455;
         private bool isMoving = false;
-        private void elevatorTick_Tick(object sender, EventArgs e)
+        private void elevator_tick_animation(object sender, EventArgs e)
         {
-            int elevator_position = this.picElevator.Location.Y;
-            if (elevator_position != target_position && !isDoorsOpen)
+            if (!this.isDoorsOpen && !isDoorsMoving)
             {
-                isMoving = true;
-                if (elevator_position<target_position)
+                int elevator_position = this.picElevator.Location.Y;
+                if (elevator_position != target_position && !isDoorsOpen)
                 {
-                    this.picElevator.Location = new System.Drawing.Point(this.picElevator.Location.X, this.picElevator.Location.Y + 1);
-                    this.picRightDoor.Location = new System.Drawing.Point(this.picRightDoor.Location.X, this.picRightDoor.Location.Y + 1);
-                    this.picLeftDoor.Location = new System.Drawing.Point(this.picLeftDoor.Location.X, this.picLeftDoor.Location.Y + 1);
+                    isMoving = true;
+                    if (elevator_position < target_position)
+                    {
+                        this.picElevator.Location = new System.Drawing.Point(this.picElevator.Location.X, this.picElevator.Location.Y + 1);
+                        this.picRightDoor.Location = new System.Drawing.Point(this.picRightDoor.Location.X, this.picRightDoor.Location.Y + 1);
+                        this.picLeftDoor.Location = new System.Drawing.Point(this.picLeftDoor.Location.X, this.picLeftDoor.Location.Y + 1);
+                    }
+                    else
+                    {
+                        this.picElevator.Location = new System.Drawing.Point(this.picElevator.Location.X, this.picElevator.Location.Y - 1);
+                        this.picRightDoor.Location = new System.Drawing.Point(this.picRightDoor.Location.X, this.picRightDoor.Location.Y - 1);
+                        this.picLeftDoor.Location = new System.Drawing.Point(this.picLeftDoor.Location.X, this.picLeftDoor.Location.Y - 1);
+                    }
                 }
                 else
                 {
-                    this.picElevator.Location = new System.Drawing.Point(this.picElevator.Location.X, this.picElevator.Location.Y - 1);
-                    this.picRightDoor.Location = new System.Drawing.Point(this.picRightDoor.Location.X, this.picRightDoor.Location.Y - 1);
-                    this.picLeftDoor.Location = new System.Drawing.Point(this.picLeftDoor.Location.X, this.picLeftDoor.Location.Y - 1);
+                    isMoving = false;
+                    this.elevatorTick.Enabled = false;
+                    this.openDoors();
                 }
             }
-            else
+        }
+        private void moveElevatorTo(int level)
+        {
+            if (!isMoving)
             {
-                isMoving = false;
-                this.elevatorTick.Enabled = false;
-                this.openDoors();
+                this.closeDoors();
+                this.target_position = level;
+                this.elevatorTick.Enabled = true;
             }
-         
         }
 
         private void btnLevel2_Click(object sender, EventArgs e)
         {
-            if (!isMoving)
-            {
-                this.target_position = LEVEL_2;
-                this.elevatorTick.Enabled = true;
-            }
+            this.moveElevatorTo(LEVEL_2);
         }
 
         private void btnLevel1_Click(object sender, EventArgs e)
         {
-            if (!isMoving)
-            {
-                this.target_position = LEVEL_1;
-                this.elevatorTick.Enabled = true;
-            }
+            this.moveElevatorTo(LEVEL_1);
         }
 
         private void btnLevel0_Click(object sender, EventArgs e)
         {
-            if (!isMoving)
-            {
-                this.target_position = LEVEL_0;
-                this.elevatorTick.Enabled = true;
-            }
+            this.moveElevatorTo(LEVEL_0);
         }
 
     }
