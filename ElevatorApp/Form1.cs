@@ -21,12 +21,14 @@ namespace ElevatorApp
         // private bool isDoorsOpen = false;
 
         // if doors animation is running
+        private bool isElevatorMoving = false;
+        // if doors animation is running
         private bool isDoorsMoving = false;
         // Current state of the elevator doors
         private bool isDoorsOpen = false;
         private void openDoors()
         {
-            if (!this.doorsTick.Enabled && !this.isDoorsOpen)
+            if (!this.doorsTick.Enabled && !this.isDoorsOpen && !this.isElevatorMoving)
             {
                 this.isDoorsOpen = true;
                 this.isDoorsMoving = true;
@@ -82,7 +84,6 @@ namespace ElevatorApp
         private int LEVEL_2 = 35;
         private int LEVEL_1 = 245;
         private int LEVEL_0 = 455;
-        private bool isMoving = false;
         private void elevator_tick_animation(object sender, EventArgs e)
         {
             if (!this.isDoorsOpen && !isDoorsMoving)
@@ -90,7 +91,7 @@ namespace ElevatorApp
                 int elevator_position = this.picElevator.Location.Y;
                 if (elevator_position != target_position && !isDoorsOpen)
                 {
-                    isMoving = true;
+                    isElevatorMoving = true;
                     if (elevator_position < target_position)
                     {
                         this.picElevator.Location = new System.Drawing.Point(this.picElevator.Location.X, this.picElevator.Location.Y + 1);
@@ -106,7 +107,7 @@ namespace ElevatorApp
                 }
                 else
                 {
-                    isMoving = false;
+                    isElevatorMoving = false;
                     this.elevatorTick.Enabled = false;
                     this.openDoors();
                 }
@@ -114,7 +115,7 @@ namespace ElevatorApp
         }
         private void moveElevatorTo(int level)
         {
-            if (!isMoving)
+            if (!isElevatorMoving)
             {
                 this.closeDoors();
                 this.target_position = level;

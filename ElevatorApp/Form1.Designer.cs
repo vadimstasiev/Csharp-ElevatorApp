@@ -29,122 +29,106 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.picLeftDoor = new System.Windows.Forms.PictureBox();
-            this.picElevator = new System.Windows.Forms.PictureBox();
+            this.doorsTick = new System.Windows.Forms.Timer(this.components);
+            this.elevatorTick = new System.Windows.Forms.Timer(this.components);
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.lblCurrentFloor2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.picRightDoor = new System.Windows.Forms.PictureBox();
-            this.lvl1 = new System.Windows.Forms.GroupBox();
-            this.lvl0 = new System.Windows.Forms.GroupBox();
-            this.btnCall1 = new System.Windows.Forms.Button();
-            this.btnCall0 = new System.Windows.Forms.Button();
-            this.btnCall2 = new System.Windows.Forms.Button();
-            this.lvl2 = new System.Windows.Forms.GroupBox();
+            this.picLeftDoor = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCloseDoors = new System.Windows.Forms.Button();
             this.btnOpenDoors = new System.Windows.Forms.Button();
             this.btnLevel2 = new System.Windows.Forms.Button();
             this.btnLevel1 = new System.Windows.Forms.Button();
             this.btnLevel0 = new System.Windows.Forms.Button();
-            this.doorsTick = new System.Windows.Forms.Timer(this.components);
-            this.elevatorTick = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.picLeftDoor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picElevator)).BeginInit();
+            this.picElevator = new System.Windows.Forms.PictureBox();
+            this.btnCall2 = new System.Windows.Forms.Button();
+            this.lvl2 = new System.Windows.Forms.GroupBox();
+            this.btnCall0 = new System.Windows.Forms.Button();
+            this.btnCall1 = new System.Windows.Forms.Button();
+            this.lvl0 = new System.Windows.Forms.GroupBox();
+            this.lvl1 = new System.Windows.Forms.GroupBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblCurrentFloor1 = new System.Windows.Forms.Label();
+            this.lblCurrentFloor0 = new System.Windows.Forms.Label();
+            this.tabControl1.SuspendLayout();
+            this.lblCurrentFloor2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRightDoor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftDoor)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picElevator)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox3
+            // doorsTick
             // 
-            this.textBox3.Location = new System.Drawing.Point(632, 12);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox3.Size = new System.Drawing.Size(303, 615);
-            this.textBox3.TabIndex = 2;
+            this.doorsTick.Interval = 1;
+            this.doorsTick.Tick += new System.EventHandler(this.doors_tick_animation);
             // 
-            // picLeftDoor
+            // elevatorTick
             // 
-            this.picLeftDoor.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
-            this.picLeftDoor.Location = new System.Drawing.Point(70, 245);
-            this.picLeftDoor.Name = "picLeftDoor";
-            this.picLeftDoor.Size = new System.Drawing.Size(61, 165);
-            this.picLeftDoor.TabIndex = 4;
-            this.picLeftDoor.TabStop = false;
+            this.elevatorTick.Interval = 1;
+            this.elevatorTick.Tick += new System.EventHandler(this.elevator_tick_animation);
             // 
-            // picElevator
+            // tabControl1
             // 
-            this.picElevator.BackgroundImage = global::ElevatorApp.Properties.Resources.elevator;
-            this.picElevator.Location = new System.Drawing.Point(70, 245);
-            this.picElevator.Name = "picElevator";
-            this.picElevator.Size = new System.Drawing.Size(120, 165);
-            this.picElevator.TabIndex = 3;
-            this.picElevator.TabStop = false;
+            this.tabControl1.Controls.Add(this.lblCurrentFloor2);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(996, 739);
+            this.tabControl1.TabIndex = 13;
+            // 
+            // lblCurrentFloor2
+            // 
+            this.lblCurrentFloor2.Controls.Add(this.lblCurrentFloor0);
+            this.lblCurrentFloor2.Controls.Add(this.lblCurrentFloor1);
+            this.lblCurrentFloor2.Controls.Add(this.label1);
+            this.lblCurrentFloor2.Controls.Add(this.picRightDoor);
+            this.lblCurrentFloor2.Controls.Add(this.picLeftDoor);
+            this.lblCurrentFloor2.Controls.Add(this.groupBox1);
+            this.lblCurrentFloor2.Controls.Add(this.picElevator);
+            this.lblCurrentFloor2.Controls.Add(this.btnCall2);
+            this.lblCurrentFloor2.Controls.Add(this.lvl2);
+            this.lblCurrentFloor2.Controls.Add(this.btnCall0);
+            this.lblCurrentFloor2.Controls.Add(this.btnCall1);
+            this.lblCurrentFloor2.Controls.Add(this.lvl0);
+            this.lblCurrentFloor2.Controls.Add(this.lvl1);
+            this.lblCurrentFloor2.Location = new System.Drawing.Point(4, 22);
+            this.lblCurrentFloor2.Name = "lblCurrentFloor2";
+            this.lblCurrentFloor2.Padding = new System.Windows.Forms.Padding(3);
+            this.lblCurrentFloor2.Size = new System.Drawing.Size(988, 713);
+            this.lblCurrentFloor2.TabIndex = 0;
+            this.lblCurrentFloor2.Text = "tabPage1";
+            this.lblCurrentFloor2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(12, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "\\";
             // 
             // picRightDoor
             // 
             this.picRightDoor.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
-            this.picRightDoor.Location = new System.Drawing.Point(130, 245);
+            this.picRightDoor.Location = new System.Drawing.Point(135, 251);
             this.picRightDoor.Name = "picRightDoor";
             this.picRightDoor.Size = new System.Drawing.Size(61, 165);
-            this.picRightDoor.TabIndex = 5;
+            this.picRightDoor.TabIndex = 15;
             this.picRightDoor.TabStop = false;
             // 
-            // lvl1
+            // picLeftDoor
             // 
-            this.lvl1.Location = new System.Drawing.Point(55, 219);
-            this.lvl1.Name = "lvl1";
-            this.lvl1.Size = new System.Drawing.Size(151, 201);
-            this.lvl1.TabIndex = 6;
-            this.lvl1.TabStop = false;
-            this.lvl1.Text = "level 1";
-            // 
-            // lvl0
-            // 
-            this.lvl0.Location = new System.Drawing.Point(55, 426);
-            this.lvl0.Name = "lvl0";
-            this.lvl0.Size = new System.Drawing.Size(151, 201);
-            this.lvl0.TabIndex = 7;
-            this.lvl0.TabStop = false;
-            this.lvl0.Text = "level 0";
-            // 
-            // btnCall1
-            // 
-            this.btnCall1.Location = new System.Drawing.Point(14, 315);
-            this.btnCall1.Name = "btnCall1";
-            this.btnCall1.Size = new System.Drawing.Size(35, 23);
-            this.btnCall1.TabIndex = 8;
-            this.btnCall1.Text = "Call";
-            this.btnCall1.UseVisualStyleBackColor = true;
-            this.btnCall1.Click += new System.EventHandler(this.btnLevel1_Click);
-            // 
-            // btnCall0
-            // 
-            this.btnCall0.Location = new System.Drawing.Point(14, 515);
-            this.btnCall0.Name = "btnCall0";
-            this.btnCall0.Size = new System.Drawing.Size(35, 23);
-            this.btnCall0.TabIndex = 9;
-            this.btnCall0.Text = "Call";
-            this.btnCall0.UseVisualStyleBackColor = true;
-            this.btnCall0.Click += new System.EventHandler(this.btnLevel0_Click);
-            // 
-            // btnCall2
-            // 
-            this.btnCall2.Location = new System.Drawing.Point(14, 108);
-            this.btnCall2.Name = "btnCall2";
-            this.btnCall2.Size = new System.Drawing.Size(35, 23);
-            this.btnCall2.TabIndex = 11;
-            this.btnCall2.Text = "Call";
-            this.btnCall2.UseVisualStyleBackColor = true;
-            this.btnCall2.Click += new System.EventHandler(this.btnLevel2_Click);
-            // 
-            // lvl2
-            // 
-            this.lvl2.Location = new System.Drawing.Point(55, 12);
-            this.lvl2.Name = "lvl2";
-            this.lvl2.Size = new System.Drawing.Size(151, 201);
-            this.lvl2.TabIndex = 10;
-            this.lvl2.TabStop = false;
-            this.lvl2.Text = "level 2";
+            this.picLeftDoor.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
+            this.picLeftDoor.Location = new System.Drawing.Point(75, 251);
+            this.picLeftDoor.Name = "picLeftDoor";
+            this.picLeftDoor.Size = new System.Drawing.Size(61, 165);
+            this.picLeftDoor.TabIndex = 14;
+            this.picLeftDoor.TabStop = false;
             // 
             // groupBox1
             // 
@@ -153,10 +137,10 @@
             this.groupBox1.Controls.Add(this.btnLevel2);
             this.groupBox1.Controls.Add(this.btnLevel1);
             this.groupBox1.Controls.Add(this.btnLevel0);
-            this.groupBox1.Location = new System.Drawing.Point(290, 37);
+            this.groupBox1.Location = new System.Drawing.Point(295, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(285, 176);
-            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Internal Elevator Buttons";
             // 
@@ -210,62 +194,143 @@
             this.btnLevel0.UseVisualStyleBackColor = true;
             this.btnLevel0.Click += new System.EventHandler(this.btnLevel0_Click);
             // 
-            // doorsTick
+            // picElevator
             // 
-            this.doorsTick.Interval = 1;
-            this.doorsTick.Tick += new System.EventHandler(this.doors_tick_animation);
+            this.picElevator.BackgroundImage = global::ElevatorApp.Properties.Resources.elevator;
+            this.picElevator.Location = new System.Drawing.Point(75, 251);
+            this.picElevator.Name = "picElevator";
+            this.picElevator.Size = new System.Drawing.Size(120, 165);
+            this.picElevator.TabIndex = 13;
+            this.picElevator.TabStop = false;
             // 
-            // elevatorTick
+            // btnCall2
             // 
-            this.elevatorTick.Interval = 1;
-            this.elevatorTick.Tick += new System.EventHandler(this.elevator_tick_animation);
+            this.btnCall2.Location = new System.Drawing.Point(19, 114);
+            this.btnCall2.Name = "btnCall2";
+            this.btnCall2.Size = new System.Drawing.Size(35, 23);
+            this.btnCall2.TabIndex = 21;
+            this.btnCall2.Text = "Call";
+            this.btnCall2.UseVisualStyleBackColor = true;
+            this.btnCall2.Click += new System.EventHandler(this.btnLevel2_Click);
+            // 
+            // lvl2
+            // 
+            this.lvl2.Location = new System.Drawing.Point(60, 18);
+            this.lvl2.Name = "lvl2";
+            this.lvl2.Size = new System.Drawing.Size(151, 201);
+            this.lvl2.TabIndex = 20;
+            this.lvl2.TabStop = false;
+            this.lvl2.Text = "level 2";
+            // 
+            // btnCall0
+            // 
+            this.btnCall0.Location = new System.Drawing.Point(19, 521);
+            this.btnCall0.Name = "btnCall0";
+            this.btnCall0.Size = new System.Drawing.Size(35, 23);
+            this.btnCall0.TabIndex = 19;
+            this.btnCall0.Text = "Call";
+            this.btnCall0.UseVisualStyleBackColor = true;
+            this.btnCall0.Click += new System.EventHandler(this.btnLevel0_Click);
+            // 
+            // btnCall1
+            // 
+            this.btnCall1.Location = new System.Drawing.Point(19, 321);
+            this.btnCall1.Name = "btnCall1";
+            this.btnCall1.Size = new System.Drawing.Size(35, 23);
+            this.btnCall1.TabIndex = 18;
+            this.btnCall1.Text = "Call";
+            this.btnCall1.UseVisualStyleBackColor = true;
+            this.btnCall1.Click += new System.EventHandler(this.btnLevel1_Click);
+            // 
+            // lvl0
+            // 
+            this.lvl0.Location = new System.Drawing.Point(60, 432);
+            this.lvl0.Name = "lvl0";
+            this.lvl0.Size = new System.Drawing.Size(151, 201);
+            this.lvl0.TabIndex = 17;
+            this.lvl0.TabStop = false;
+            this.lvl0.Text = "level 0";
+            // 
+            // lvl1
+            // 
+            this.lvl1.Location = new System.Drawing.Point(60, 225);
+            this.lvl1.Name = "lvl1";
+            this.lvl1.Size = new System.Drawing.Size(151, 201);
+            this.lvl1.TabIndex = 16;
+            this.lvl1.TabStop = false;
+            this.lvl1.Text = "level 1";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(988, 713);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // lblCurrentFloor1
+            // 
+            this.lblCurrentFloor1.AutoSize = true;
+            this.lblCurrentFloor1.Location = new System.Drawing.Point(28, 294);
+            this.lblCurrentFloor1.Name = "lblCurrentFloor1";
+            this.lblCurrentFloor1.Size = new System.Drawing.Size(12, 13);
+            this.lblCurrentFloor1.TabIndex = 24;
+            this.lblCurrentFloor1.Text = "\\";
+            // 
+            // lblCurrentFloor0
+            // 
+            this.lblCurrentFloor0.AutoSize = true;
+            this.lblCurrentFloor0.Location = new System.Drawing.Point(28, 495);
+            this.lblCurrentFloor0.Name = "lblCurrentFloor0";
+            this.lblCurrentFloor0.Size = new System.Drawing.Size(12, 13);
+            this.lblCurrentFloor0.TabIndex = 25;
+            this.lblCurrentFloor0.Text = "\\";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 659);
-            this.Controls.Add(this.picRightDoor);
-            this.Controls.Add(this.picLeftDoor);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.picElevator);
-            this.Controls.Add(this.btnCall2);
-            this.Controls.Add(this.lvl2);
-            this.Controls.Add(this.btnCall0);
-            this.Controls.Add(this.btnCall1);
-            this.Controls.Add(this.lvl0);
-            this.Controls.Add(this.lvl1);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(1020, 763);
+            this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.picLeftDoor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picElevator)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.lblCurrentFloor2.ResumeLayout(false);
+            this.lblCurrentFloor2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRightDoor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLeftDoor)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picElevator)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.PictureBox picElevator;
-        private System.Windows.Forms.PictureBox picLeftDoor;
+        private System.Windows.Forms.Timer doorsTick;
+        private System.Windows.Forms.Timer elevatorTick;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage lblCurrentFloor2;
         private System.Windows.Forms.PictureBox picRightDoor;
-        private System.Windows.Forms.GroupBox lvl1;
-        private System.Windows.Forms.GroupBox lvl0;
-        private System.Windows.Forms.Button btnCall1;
-        private System.Windows.Forms.Button btnCall0;
-        private System.Windows.Forms.Button btnCall2;
-        private System.Windows.Forms.GroupBox lvl2;
+        private System.Windows.Forms.PictureBox picLeftDoor;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnCloseDoors;
+        private System.Windows.Forms.Button btnOpenDoors;
         private System.Windows.Forms.Button btnLevel2;
         private System.Windows.Forms.Button btnLevel1;
         private System.Windows.Forms.Button btnLevel0;
-        private System.Windows.Forms.Button btnCloseDoors;
-        private System.Windows.Forms.Button btnOpenDoors;
-        private System.Windows.Forms.Timer doorsTick;
-        private System.Windows.Forms.Timer elevatorTick;
+        private System.Windows.Forms.PictureBox picElevator;
+        private System.Windows.Forms.Button btnCall2;
+        private System.Windows.Forms.GroupBox lvl2;
+        private System.Windows.Forms.Button btnCall0;
+        private System.Windows.Forms.Button btnCall1;
+        private System.Windows.Forms.GroupBox lvl0;
+        private System.Windows.Forms.GroupBox lvl1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCurrentFloor0;
+        private System.Windows.Forms.Label lblCurrentFloor1;
     }
 }
 
