@@ -117,6 +117,7 @@ namespace ElevatorApp
                     isElevatorMoving = false;
                     this.elevatorTick.Enabled = false;
                     this.openDoors();
+                    this.dbInterface.AddEntry(getCurrentFloor(), "Elevator Changed Floor");
                 }
             }
         }
