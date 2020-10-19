@@ -36,6 +36,7 @@
             this.picRightDoor = new System.Windows.Forms.PictureBox();
             this.picLeftDoor = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblCurrentFloor = new System.Windows.Forms.Label();
             this.btnCloseDoors = new System.Windows.Forms.Button();
             this.btnOpenDoors = new System.Windows.Forms.Button();
             this.btnLevel2 = new System.Windows.Forms.Button();
@@ -52,13 +53,15 @@
             this.lblCurrentFloor1 = new System.Windows.Forms.Label();
             this.lblCurrentFloor2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblCurrentFloor = new System.Windows.Forms.Label();
+            this.lblLogsTitle = new System.Windows.Forms.Label();
+            this.txtBoxLogs = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRightDoor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLeftDoor)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picElevator)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // doorsTick
@@ -80,6 +83,7 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(996, 739);
             this.tabControl.TabIndex = 13;
+            this.tabControl.Click += new System.EventHandler(this.tabControlClick);
             // 
             // tabPage1
             // 
@@ -136,6 +140,15 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Internal Elevator Buttons";
+            // 
+            // lblCurrentFloor
+            // 
+            this.lblCurrentFloor.AutoSize = true;
+            this.lblCurrentFloor.Location = new System.Drawing.Point(124, 33);
+            this.lblCurrentFloor.Name = "lblCurrentFloor";
+            this.lblCurrentFloor.Size = new System.Drawing.Size(12, 13);
+            this.lblCurrentFloor.TabIndex = 5;
+            this.lblCurrentFloor.Text = "/";
             // 
             // btnCloseDoors
             // 
@@ -282,6 +295,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lblLogsTitle);
+            this.tabPage2.Controls.Add(this.txtBoxLogs);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -290,14 +305,22 @@
             this.tabPage2.Text = "Logs";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lblCurrentFloor
+            // lblLogsTitle
             // 
-            this.lblCurrentFloor.AutoSize = true;
-            this.lblCurrentFloor.Location = new System.Drawing.Point(124, 33);
-            this.lblCurrentFloor.Name = "lblCurrentFloor";
-            this.lblCurrentFloor.Size = new System.Drawing.Size(12, 13);
-            this.lblCurrentFloor.TabIndex = 5;
-            this.lblCurrentFloor.Text = "/";
+            this.lblLogsTitle.AutoSize = true;
+            this.lblLogsTitle.Location = new System.Drawing.Point(254, 6);
+            this.lblLogsTitle.Name = "lblLogsTitle";
+            this.lblLogsTitle.Size = new System.Drawing.Size(33, 13);
+            this.lblLogsTitle.TabIndex = 1;
+            this.lblLogsTitle.Text = "Logs:";
+            // 
+            // txtBoxLogs
+            // 
+            this.txtBoxLogs.Location = new System.Drawing.Point(290, 6);
+            this.txtBoxLogs.Multiline = true;
+            this.txtBoxLogs.Name = "txtBoxLogs";
+            this.txtBoxLogs.Size = new System.Drawing.Size(374, 701);
+            this.txtBoxLogs.TabIndex = 0;
             // 
             // Form1
             // 
@@ -315,6 +338,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picElevator)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -344,6 +369,8 @@
         private System.Windows.Forms.Label lblCurrentFloor0;
         private System.Windows.Forms.Label lblCurrentFloor1;
         private System.Windows.Forms.Label lblCurrentFloor;
+        private System.Windows.Forms.Label lblLogsTitle;
+        private System.Windows.Forms.TextBox txtBoxLogs;
     }
 }
 

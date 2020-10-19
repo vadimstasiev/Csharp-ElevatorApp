@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,10 +12,12 @@ namespace ElevatorApp
 {
     public partial class Form1 : Form
     {
+        private DatabaseInterface dbInterface;
         public Form1()
         {
             InitializeComponent();
             this.updateDisplayElevatorPosition();
+            this.dbInterface = new DatabaseInterface();
         }
 
         // if the animation of the doors is opening or closing
@@ -71,6 +73,7 @@ namespace ElevatorApp
                 this.isDoorsMoving = false;
                 this.tempDoorPosition = 0;
                 this.doorsTick.Enabled = false;
+                this.dbInterface.AddEntry(getCurrentFloor(), isDoorsOpen ? "Doors Open" : "Doors Closed");
             }
         }
 
@@ -166,6 +169,22 @@ namespace ElevatorApp
         {
             this.moveElevatorTo(LEVEL_0);
         }
+        private void tabControlClick(object sender, EventArgs e)
+        {
+            if (tabControl.SelectedTab == this.tabPage2)
+                this.loadLogs();
+        }
+        private void loadLogs()
+        {
+            this.txtBoxLogs.Text = "";
+            ArrayList list = dbInterface.GetLogs();
+            Console.WriteLine(list.ToString());
+            foreach (String log in list)
+            {
+                this.txtBoxLogs.Text+=(log);
+            }
+        }
 
     }
+
 }
