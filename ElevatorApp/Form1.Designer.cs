@@ -55,6 +55,10 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblLogsTitle = new System.Windows.Forms.Label();
             this.txtBoxLogs = new System.Windows.Forms.TextBox();
+            this.lblCurrentTxt0 = new System.Windows.Forms.Label();
+            this.lblCurrentTxt1 = new System.Windows.Forms.Label();
+            this.lblCurrentTxt2 = new System.Windows.Forms.Label();
+            this.lblCurrentTxt3 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRightDoor)).BeginInit();
@@ -100,6 +104,9 @@
             this.tabPage1.Controls.Add(this.lblCurrentFloor0);
             this.tabPage1.Controls.Add(this.lblCurrentFloor1);
             this.tabPage1.Controls.Add(this.lblCurrentFloor2);
+            this.tabPage1.Controls.Add(this.lblCurrentTxt3);
+            this.tabPage1.Controls.Add(this.lblCurrentTxt2);
+            this.tabPage1.Controls.Add(this.lblCurrentTxt1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -111,7 +118,7 @@
             // picRightDoor
             // 
             this.picRightDoor.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
-            this.picRightDoor.Location = new System.Drawing.Point(135, 251);
+            this.picRightDoor.Location = new System.Drawing.Point(155, 251);
             this.picRightDoor.Name = "picRightDoor";
             this.picRightDoor.Size = new System.Drawing.Size(61, 165);
             this.picRightDoor.TabIndex = 15;
@@ -120,7 +127,7 @@
             // picLeftDoor
             // 
             this.picLeftDoor.BackgroundImage = global::ElevatorApp.Properties.Resources.door;
-            this.picLeftDoor.Location = new System.Drawing.Point(75, 251);
+            this.picLeftDoor.Location = new System.Drawing.Point(95, 251);
             this.picLeftDoor.Name = "picLeftDoor";
             this.picLeftDoor.Size = new System.Drawing.Size(61, 165);
             this.picLeftDoor.TabIndex = 14;
@@ -128,6 +135,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblCurrentTxt0);
             this.groupBox1.Controls.Add(this.lblCurrentFloor);
             this.groupBox1.Controls.Add(this.btnCloseDoors);
             this.groupBox1.Controls.Add(this.btnOpenDoors);
@@ -203,7 +211,7 @@
             // picElevator
             // 
             this.picElevator.BackgroundImage = global::ElevatorApp.Properties.Resources.elevator;
-            this.picElevator.Location = new System.Drawing.Point(75, 251);
+            this.picElevator.Location = new System.Drawing.Point(95, 251);
             this.picElevator.Name = "picElevator";
             this.picElevator.Size = new System.Drawing.Size(120, 165);
             this.picElevator.TabIndex = 13;
@@ -211,7 +219,7 @@
             // 
             // btnCall2
             // 
-            this.btnCall2.Location = new System.Drawing.Point(19, 114);
+            this.btnCall2.Location = new System.Drawing.Point(39, 114);
             this.btnCall2.Name = "btnCall2";
             this.btnCall2.Size = new System.Drawing.Size(35, 23);
             this.btnCall2.TabIndex = 21;
@@ -221,7 +229,7 @@
             // 
             // lvl2
             // 
-            this.lvl2.Location = new System.Drawing.Point(60, 18);
+            this.lvl2.Location = new System.Drawing.Point(80, 18);
             this.lvl2.Name = "lvl2";
             this.lvl2.Size = new System.Drawing.Size(151, 201);
             this.lvl2.TabIndex = 20;
@@ -230,7 +238,7 @@
             // 
             // btnCall0
             // 
-            this.btnCall0.Location = new System.Drawing.Point(19, 521);
+            this.btnCall0.Location = new System.Drawing.Point(39, 521);
             this.btnCall0.Name = "btnCall0";
             this.btnCall0.Size = new System.Drawing.Size(35, 23);
             this.btnCall0.TabIndex = 19;
@@ -240,7 +248,7 @@
             // 
             // btnCall1
             // 
-            this.btnCall1.Location = new System.Drawing.Point(19, 321);
+            this.btnCall1.Location = new System.Drawing.Point(39, 321);
             this.btnCall1.Name = "btnCall1";
             this.btnCall1.Size = new System.Drawing.Size(35, 23);
             this.btnCall1.TabIndex = 18;
@@ -250,7 +258,7 @@
             // 
             // lvl0
             // 
-            this.lvl0.Location = new System.Drawing.Point(60, 432);
+            this.lvl0.Location = new System.Drawing.Point(80, 432);
             this.lvl0.Name = "lvl0";
             this.lvl0.Size = new System.Drawing.Size(151, 201);
             this.lvl0.TabIndex = 17;
@@ -259,7 +267,7 @@
             // 
             // lvl1
             // 
-            this.lvl1.Location = new System.Drawing.Point(60, 225);
+            this.lvl1.Location = new System.Drawing.Point(80, 225);
             this.lvl1.Name = "lvl1";
             this.lvl1.Size = new System.Drawing.Size(151, 201);
             this.lvl1.TabIndex = 16;
@@ -269,7 +277,7 @@
             // lblCurrentFloor0
             // 
             this.lblCurrentFloor0.AutoSize = true;
-            this.lblCurrentFloor0.Location = new System.Drawing.Point(28, 495);
+            this.lblCurrentFloor0.Location = new System.Drawing.Point(48, 495);
             this.lblCurrentFloor0.Name = "lblCurrentFloor0";
             this.lblCurrentFloor0.Size = new System.Drawing.Size(12, 13);
             this.lblCurrentFloor0.TabIndex = 25;
@@ -278,7 +286,7 @@
             // lblCurrentFloor1
             // 
             this.lblCurrentFloor1.AutoSize = true;
-            this.lblCurrentFloor1.Location = new System.Drawing.Point(28, 294);
+            this.lblCurrentFloor1.Location = new System.Drawing.Point(48, 294);
             this.lblCurrentFloor1.Name = "lblCurrentFloor1";
             this.lblCurrentFloor1.Size = new System.Drawing.Size(12, 13);
             this.lblCurrentFloor1.TabIndex = 24;
@@ -287,7 +295,7 @@
             // lblCurrentFloor2
             // 
             this.lblCurrentFloor2.AutoSize = true;
-            this.lblCurrentFloor2.Location = new System.Drawing.Point(28, 89);
+            this.lblCurrentFloor2.Location = new System.Drawing.Point(48, 89);
             this.lblCurrentFloor2.Name = "lblCurrentFloor2";
             this.lblCurrentFloor2.Size = new System.Drawing.Size(12, 13);
             this.lblCurrentFloor2.TabIndex = 23;
@@ -321,6 +329,42 @@
             this.txtBoxLogs.Name = "txtBoxLogs";
             this.txtBoxLogs.Size = new System.Drawing.Size(374, 701);
             this.txtBoxLogs.TabIndex = 0;
+            // 
+            // lblCurrentTxt0
+            // 
+            this.lblCurrentTxt0.AutoSize = true;
+            this.lblCurrentTxt0.Location = new System.Drawing.Point(48, 33);
+            this.lblCurrentTxt0.Name = "lblCurrentTxt0";
+            this.lblCurrentTxt0.Size = new System.Drawing.Size(70, 13);
+            this.lblCurrentTxt0.TabIndex = 6;
+            this.lblCurrentTxt0.Text = "Current Floor:";
+            // 
+            // lblCurrentTxt1
+            // 
+            this.lblCurrentTxt1.AutoSize = true;
+            this.lblCurrentTxt1.Location = new System.Drawing.Point(6, 66);
+            this.lblCurrentTxt1.Name = "lblCurrentTxt1";
+            this.lblCurrentTxt1.Size = new System.Drawing.Size(70, 13);
+            this.lblCurrentTxt1.TabIndex = 26;
+            this.lblCurrentTxt1.Text = "Current Floor:";
+            // 
+            // lblCurrentTxt2
+            // 
+            this.lblCurrentTxt2.AutoSize = true;
+            this.lblCurrentTxt2.Location = new System.Drawing.Point(4, 272);
+            this.lblCurrentTxt2.Name = "lblCurrentTxt2";
+            this.lblCurrentTxt2.Size = new System.Drawing.Size(70, 13);
+            this.lblCurrentTxt2.TabIndex = 27;
+            this.lblCurrentTxt2.Text = "Current Floor:";
+            // 
+            // lblCurrentTxt3
+            // 
+            this.lblCurrentTxt3.AutoSize = true;
+            this.lblCurrentTxt3.Location = new System.Drawing.Point(4, 465);
+            this.lblCurrentTxt3.Name = "lblCurrentTxt3";
+            this.lblCurrentTxt3.Size = new System.Drawing.Size(70, 13);
+            this.lblCurrentTxt3.TabIndex = 28;
+            this.lblCurrentTxt3.Text = "Current Floor:";
             // 
             // Form1
             // 
@@ -371,6 +415,10 @@
         private System.Windows.Forms.Label lblCurrentFloor;
         private System.Windows.Forms.Label lblLogsTitle;
         private System.Windows.Forms.TextBox txtBoxLogs;
+        private System.Windows.Forms.Label lblCurrentTxt3;
+        private System.Windows.Forms.Label lblCurrentTxt2;
+        private System.Windows.Forms.Label lblCurrentTxt1;
+        private System.Windows.Forms.Label lblCurrentTxt0;
     }
 }
 
