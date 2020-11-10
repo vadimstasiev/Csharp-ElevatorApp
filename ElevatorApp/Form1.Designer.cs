@@ -217,16 +217,6 @@
             this.picElevator.TabIndex = 13;
             this.picElevator.TabStop = false;
             // 
-            // btnCall2
-            // 
-            this.btnCall2.Location = new System.Drawing.Point(39, 114);
-            this.btnCall2.Name = "btnCall2";
-            this.btnCall2.Size = new System.Drawing.Size(35, 23);
-            this.btnCall2.TabIndex = 21;
-            this.btnCall2.Text = "Call";
-            this.btnCall2.UseVisualStyleBackColor = true;
-            this.btnCall2.Click += new System.EventHandler(this.btnLevel2_Click);
-            // 
             // lvl2
             // 
             this.lvl2.Location = new System.Drawing.Point(80, 18);
@@ -255,6 +245,16 @@
             this.btnCall1.Text = "Call";
             this.btnCall1.UseVisualStyleBackColor = true;
             this.btnCall1.Click += new System.EventHandler(this.btnLevel1_Click);
+            // 
+            // btnCall2
+            // 
+            this.btnCall2.Location = new System.Drawing.Point(39, 114);
+            this.btnCall2.Name = "btnCall2";
+            this.btnCall2.Size = new System.Drawing.Size(35, 23);
+            this.btnCall2.TabIndex = 21;
+            this.btnCall2.Text = "Call";
+            this.btnCall2.UseVisualStyleBackColor = true;
+            this.btnCall2.Click += new System.EventHandler(this.btnLevel2_Click);
             // 
             // lvl0
             // 
